@@ -9,12 +9,16 @@ import useGeolocation from './hooks/useGeolocation'
 
 function App() {
 
-  const { coordinates } = useGeolocation()
+  const { coordinates, permission } = useGeolocation()
+
 
   return (
     <>
       <pre>
         {JSON.stringify(coordinates)}
+      </pre>
+      <pre>
+        {permission}
       </pre>
       <Header>
         <Navbar />
