@@ -5,11 +5,17 @@ import Navbar from './components/Navbar'
 import Reviews from './components/Reviews'
 import Services from './components/Services'
 import Team from './components/Team'
+import useGeolocation from './hooks/useGeolocation'
 
 function App() {
 
+  const { coordinates } = useGeolocation()
+
   return (
     <>
+      <pre>
+        {JSON.stringify(coordinates)}
+      </pre>
       <Header>
         <Navbar />
         <Banner />
